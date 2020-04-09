@@ -1,12 +1,19 @@
 import escapeStringRegexp from 'escape-string-regexp';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 
 import App from '../../App';
 
 const renderMiddleware = () => (req, res) => {
   let html = req.html;
-  const htmlContent = ReactDOMServer.renderToString(<App />);
+  const context = {};
+
+  const htmlContent = ReactDOMServer.renderToString(
+      <StaticRouter location={req.url} context={context}>
+        <App />
+      </StaticRouter>
+      );
   const htmlReplacements = {
     HTML_CONTENT: htmlContent,
   };

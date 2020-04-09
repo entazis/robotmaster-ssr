@@ -9,7 +9,7 @@ export default class Layout extends Component {
     return (
         <div className={'layout'}>
           <Topbar/>
-          <Navbar path={this.props.path}/>
+          <Navbar/>
           {this.props.children}
           <Footer/>
           <SocialPages/>

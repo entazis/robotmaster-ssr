@@ -4,20 +4,25 @@ import { IntlProvider } from 'react-intl';
 
 import './App.css';
 import Layout from "./client/layouts/layout";
+import NotFound from './client/not-found';
 
-import messages_cs from '../localization/cs.json';
-import messages_de from '../localization/de.json';
-import messages_en from '../localization/en.json';
-import messages_es from '../localization/es.json';
-import messages_fi from '../localization/fi.json';
-import messages_fr from '../localization/fr.json';
-import messages_ja from '../localization/ja.json';
-import messages_pt from '../localization/pt.json';
-import messages_tr from '../localization/tr.json';
-import messages_zh from '../localization/zh.json';
+import Test from './client/test-page';
+
+import messages_cs from './localization/cs.json';
+import messages_de from './localization/de.json';
+import messages_en from './localization/en.json';
+import messages_es from './localization/es.json';
+import messages_fi from './localization/fi.json';
+import messages_fr from './localization/fr.json';
+import messages_ja from './localization/ja.json';
+import messages_pt from './localization/pt.json';
+import messages_tr from './localization/tr.json';
+import messages_zh from './localization/zh.json';
+
+
 
 function App() {
-  const language = this.props.params.language || 'en';
+  const language = 'en';
 
   const messages = {
     'cs': messages_cs,
@@ -50,7 +55,8 @@ function App() {
               <Route path="/:language/eula" component={''} />
               <Route path="/:language/gdpr" component={''} />
               <Route path="/:language/partners" component={''} />
-              <Route path="/:language" exact component={'Home'}/>
+              <Route path="/:language/not-found" component={NotFound} />
+              <Route path="/:language" exact component={Test}/>
               <Redirect to="/en"/>
             </Switch>
           </Layout>
