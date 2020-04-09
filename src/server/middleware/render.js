@@ -10,11 +10,11 @@ import App from '../../App';
 const renderMiddleware = () => async (req, res) => {
   const matchingRoutes = matchRoutes(Routes, req.url);
 
+  //FIXME
   const data = [];
   for (const route of matchingRoutes) {
     if (route.loadData) {
       const temp = await route.loadData();
-      console.log(route);
       data.push(temp);
     }
   }
