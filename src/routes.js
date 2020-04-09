@@ -1,3 +1,5 @@
+import Home from './client/home/home';
+import About from './client/about/about';
 import NotFound from './client/not-found';
 import Test from './client/test-page';
 
@@ -5,9 +7,9 @@ import loadData from './helpers/loadData';
 
 const Routes = [
   {
-    path: '/:language',
+    path: '/:lan',
     exact: true,
-    component: Test,
+    component: Home,
     loadData: () => loadData('posts')
   },
   {
@@ -23,9 +25,9 @@ const Routes = [
     loadData: () => loadData('posts')
   },
   {
-    path: '/about',
+    path: '/:lan/about',
     exact: true,
-    component: Test,
+    component: About,
     loadData: () => loadData('posts')
   },
   {

@@ -1,0 +1,37 @@
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-item .timeline-img, .timeline-item .timeline-desc {
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeline-item .timeline-img img {
+  display: block;
+  width: 120px;
+}
+.timeline-item .timeline-desc p {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+.timeline-item .timeline-desc p .year, .timeline-item .timeline-desc p .flavor {
+  display: inline-block;
+}
+.timeline-item .timeline-desc p .year {
+  color: #d5d9dc;
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+.timeline-item .timeline-desc p .flavor {
+  color: #93989e;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.timeline-item .timeline-desc.double {
+  height: 240px;
+}

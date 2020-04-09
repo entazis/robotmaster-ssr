@@ -1,5 +1,7 @@
 import React from "react";
 
+import './navbar.css';
+
 export default function () {
-  return <p>footer</p>;
+  return <p>navbar</p>;
 }

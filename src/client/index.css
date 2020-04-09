@@ -1,13 +1,160 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -ms-overflow-style: scrollbar;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.banner {
+  overflow: hidden;
+}
+.banner .img-container {
+  height: 227px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: unset;
+  background-size: cover;
+}
+.banner .caption {
+  position: absolute;
+  top: 256px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: inline;
+  padding: 12px 64px;
+  color: white;
+  font-size: 36px;
+}
+.banner + div {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.alignLeft {
+  display: block;
+  float: left;
+}
+.alignRight {
+  display: block;
+  margin-left: 15px;
+  float: right;
+}
+.partner-logo {
+  height: 120px;
+}
+.partner-logo img {
+  width: 100%;
+  max-width: 180px;
+}
+h2.subtitle {
+  display: inline-block;
+  background-color: #353637;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+h3.subtitle {
+  color: #e32726;
+  padding: 8px 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
+  font-weight: bold;
+}
+.leading-paragraph {
+  font-weight: bold;
+  color: black;
+  font-size: 24px;
+}
+.bigger-page-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.bigger-page-text ul li {
+  font-size: 18px;
+}
+.flex-center-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-img img {
+  display: block;
+}
+.multiChoice {
+  position: relative;
+}
+.multiChoice input {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+.multiChoice .selected {
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 37px;
+  padding: 5px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+.multiChoice .selected .item {
+  font-size: 13px;
+  background: #03a9f4;
+  border-radius: 13px;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.multiChoice .selected .item i {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  color: #b5e1ff;
+  margin-left: 5px;
+}
+.multiChoice .selected .item i:hover {
+  color: white;
+}
+.multiChoice .selected .item svg {
+  display: block;
+  margin-left: 8px;
+  width: 10px;
+  cursor: pointer;
+}
+.multiChoice .selected .item svg path {
+  fill: white;
+}
+.multiChoice .option {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-top: 0;
+  display: none;
+  z-index: 100;
+  padding: 0;
+}
+.multiChoice .option li {
+  width: 100%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.multiChoice .option li:hover {
+  background: #03a9f4;
+  color: #fff;
+}
+.multiChoice .option.active {
+  display: block;
 }

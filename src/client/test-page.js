@@ -7,8 +7,6 @@ export default function (props) {
     dataFromFetch = props.staticContext.data
   }
 
-  console.log(props.staticContext);
-
   return (
       <div className={'test-class'}>
         <p>Hello test!</p>
