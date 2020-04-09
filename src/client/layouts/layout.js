@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Topbar from "../ui/topbar";
-import Navbar from "../ui/navbar/navbar";
-import Footer from "../ui/footer/footer";
-import SocialPages from "../ui/social-pages";
+import Topbar from "./topbar";
+import Navbar from "./navbar/navbar";
+import Footer from "./footer/footer";
+import SocialPages from "./social-pages";
 
 export default class Layout extends Component {
   render() {
