@@ -1,5 +1,20 @@
 import React from 'react';
 
-export default function () {
-  return <p>Hello</p>;
+export default function (props) {
+  let dataFromFetch = [];
+
+  if (props.staticContext && props.staticContext.data) {
+    dataFromFetch = props.staticContext.data
+  }
+
+  console.log(props.staticContext);
+
+  return (
+      <div className={'test-class'}>
+        <p>Hello test!</p>
+        <ul>
+          {dataFromFetch.map(item => <li key={item.id}>item.title</li>)}
+        </ul>
+      </div>
+  );
 }
