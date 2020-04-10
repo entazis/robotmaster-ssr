@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import {FormattedMessage} from "react-intl";
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
 import './topbar.css';
 
 export default function(props) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
       <div className={'topbar ' + (props.isTopbarFixed ? 'topbarFixed' : '')}>
         <div className="container">
