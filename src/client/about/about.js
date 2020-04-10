@@ -2,6 +2,7 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 
 import './about.css';
+import Banner from '../ui/banner';
 
 const timelineYears = [
   {
@@ -55,6 +56,7 @@ export default function (props) {
   console.log(props.match.params.lan);
   return (
       <div className="about">
+        <Banner imageIndex={4}/>
         <h2 id="our-story" className="subtitle">
           <FormattedMessage id='about-title-1'/>
         </h2>

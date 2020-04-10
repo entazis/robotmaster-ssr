@@ -4,6 +4,7 @@ import { Carousel } from 'react-bootstrap';
 
 import './home.css';
 import Ribbon from './ribbon/ribbon';
+import Banner from "../ui/banner";
 
 const slides = [
   'slideshow-img-1',
@@ -22,6 +23,7 @@ export default function () {
 
   return (
       <div className="home">
+        <Banner />
         <div className="container slideshow">
           <Carousel>
             {slideUrls.map(url => {

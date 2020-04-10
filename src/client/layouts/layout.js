@@ -3,7 +3,6 @@ import Topbar from "./topbar/topbar";
 import Navbar from "./navbar/navbar";
 import Footer from "./footer/footer";
 import SocialPages from "./social-actions/social-actions";
-import Banner from "./banner";
 
 export default class Layout extends Component {
   render() {
@@ -11,7 +10,6 @@ export default class Layout extends Component {
         <div className={'layout'}>
           <Topbar/>
           <Navbar/>
-          <Banner/>
           {this.props.children}
           <Footer/>
           <SocialPages/>
