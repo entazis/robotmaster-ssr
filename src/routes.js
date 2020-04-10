@@ -1,3 +1,6 @@
+import React from 'react';
+import { Redirect } from 'react-router';
+
 import Home from './client/home/home';
 import About from './client/about/about';
 import NotFound from './client/not-found';
@@ -6,6 +9,12 @@ import Test from './client/test-page';
 import loadData from './helpers/loadData';
 
 const Routes = [
+  {
+    path: '/',
+    exact: true,
+    component: () => {return <Redirect to="/en"/>},
+    loadData: () => loadData('posts')
+  },
   {
     path: '/:lan',
     exact: true,
