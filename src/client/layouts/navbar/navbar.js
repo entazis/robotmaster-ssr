@@ -31,7 +31,7 @@ export default function (props) {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand" href="">
+            <a className="navbar-brand" href>
               <div className="logo" />
             </a>
           </div>

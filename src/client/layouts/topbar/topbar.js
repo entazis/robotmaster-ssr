@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import {FormattedMessage} from "react-intl";
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
+import './topbar.css';
+
 export default function(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  }
 
   return (
       <div className={'topbar ' + (props.isTopbarFixed ? 'topbarFixed' : '')}>
@@ -32,6 +30,7 @@ export default function(props) {
           </a>
           <a
               href="https://robotmaster.atlassian.net/servicedesk/customer/portals"
+              rel='noreferrer noopener'
               target="_blank">
             <FormattedMessage id='topbar-support'/>
           </a>

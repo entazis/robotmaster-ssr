@@ -18,7 +18,7 @@ export default function () {
     list: [
       [<FormattedMessage id='footer-newsroom-whatsnew'/>, 'newsroom'],
       [<FormattedMessage id='success-page-caption'/>, 'success-stories'],
-      [<FormattedMessage id='success-section-2-title/'/>, 'success-stories#media'],
+      [<FormattedMessage id='success-section-2-title'/>, 'success-stories#media'],
     ],
   }, {
     title: <FormattedMessage id='products-page-caption'/>,
@@ -69,7 +69,7 @@ export default function () {
   const createIcon = (icon, url) => {
     return (
         <span className="icon">
-        <a href={url} target="_blank">
+        <a href={url} rel='noreferrer noopener' target="_blank">
           <i className={'fa fa-' + icon} />
         </a>
       </span>
