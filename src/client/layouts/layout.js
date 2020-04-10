@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Topbar from "./topbar";
 import Navbar from "./navbar/navbar";
 import Footer from "./footer/footer";
-import SocialPages from "./social-pages";
+import SocialPages from "./social-actions/social-actions";
 
 export default class Layout extends Component {
   render() {
