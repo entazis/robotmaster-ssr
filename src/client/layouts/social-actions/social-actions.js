@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookSquare, faInstagramSquare, faTwitterSquare, faYoutubeSquare, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function () {
 
@@ -12,26 +14,27 @@ export default function () {
            onClick={() => handleClick()}
            data-eventid='facebook'>
           <i className="fa fa-facebook-square"/>
+          <FontAwesomeIcon icon={faFacebookSquare}/>
         </a>
         <a href="https://www.instagram.com/robotmaster"
            onClick={() => handleClick()}
            data-eventid='instagram'>
-          <i className="fa fa-instagram"/>
+          <i className={faInstagramSquare}/>
         </a>
         <a href="https://www.twitter.com/robotmaster"
            onClick={() => handleClick()}
            data-eventid='twitter'>
-          <i className="fa fa-twitter"/>
+          <i className={faTwitterSquare}/>
         </a>
         <a href="https://www.youtube.com/robotmaster"
            onClick={() => handleClick()}
            data-eventid='youtube'>
-          <i className="fa fa-youtube-play"/>
+          <i className={faYoutubeSquare}/>
         </a>
         <a href="https://www.linkedin.com/company/robotmaster-"
            onClick={() => handleClick()}
            data-eventid='linkedin'>
-          <i className="fa fa-linkedin-square"/>
+          <i className={faLinkedinIn}/>
         </a>
       </div>
   );
