@@ -12,8 +12,7 @@ const Routes = [
   {
     path: '/',
     exact: true,
-    component: () => {return <Redirect to="/en"/>},
-    loadData: () => loadData('posts')
+    component: () => {return <Redirect to="/en"/>}
   },
   {
     path: '/:lan',

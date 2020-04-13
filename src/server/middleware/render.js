@@ -3,20 +3,17 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { matchRoutes } from "react-router-config";
-import Routes from '../../routes';
+import serialize from 'serialize-javascript';
 
+import Routes from '../../routes';
 import App from '../../App';
 
 const renderMiddleware = () => async (req, res) => {
   const matchingRoutes = matchRoutes(Routes, req.url);
 
-  //FIXME
-  const data = [];
-  for (const route of matchingRoutes) {
-    if (route.loadData) {
-      const temp = await route.loadData();
-      data.push(temp);
-    }
+  let data;
+  if (matchingRoutes[0].route.loadData) {
+    data = await matchingRoutes[0].route.loadData();
   }
 
   const context = { data };
@@ -43,7 +40,9 @@ const renderMiddleware = () => async (req, res) => {
     html = html.replace(
       new RegExp('__' + escapeStringRegexp(key) + '__', 'g'),
       value
-    );
+    ).replace(
+        '</body>',
+        `<script>window.__ROUTE_DATA__ = ${serialize(data)}</script></body>`);
   });
 
   res.send(html);
