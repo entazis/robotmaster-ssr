@@ -15,103 +15,103 @@ const Routes = [
     component: () => {return <Redirect to="/en"/>}
   },
   {
-    path: '/:lan',
+    path: '/:lang',
     exact: true,
     component: Home,
     loadData: () => loadData('posts')
   },
   {
-    path: '/v6-trial',
+    path: '/:lang/v6-trial',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/v7-trial',
+    path: '/:lang/v7-trial',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/:lan/about',
+    path: '/:lang/about',
     exact: true,
     component: About,
     loadData: () => loadData('posts')
   },
   {
-    path: '/events',
+    path: '/:lang/events',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/applications',
+    path: '/:lang/applications',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/newsroom',
+    path: '/:lang/newsroom',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/contact',
+    path: '/:lang/contact',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/disclaimer',
+    path: '/:lang/disclaimer',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/eula',
+    path: '/:lang/eula',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/gdpr',
+    path: '/:lang/gdpr',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/partners',
+    path: '/:lang/partners',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/privacy',
+    path: '/:lang/privacy',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/products',
+    path: '/:lang/products',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/whats-new',
+    path: '/:lang/whats-new',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/success-stories',
+    path: '/:lang/success-stories',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')
   },
   {
-    path: '/why-robotmaster',
+    path: '/:lang/why-robotmaster',
     exact: true,
     component: Test,
     loadData: () => loadData('posts')

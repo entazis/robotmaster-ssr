@@ -1,0 +1,5 @@
+**OSIC-CARBONE**
+<br />Application : *Fraisage, secteur de l’orthopédie*
+<br />Secteur d’activité : *Prothèses/orthèses*
+
+En 2008, ORTHOPÉDIE BONTOUX, une société spécialisée dans la fabrication et l’adaptation d’appareils orthopédiques (prothèses et orthèses) depuis 1982, a créé sa filiale, OSIC-CARBONE. « Nous avons décidé de transformer notre entreprise afin de répondre aux défis auxquels notre profession semblait être confrontée. Nous étions principalement reconnus pour la performance supérieure de nos appareils, fabriqués en matériaux composites, mais des changements révolutionnaires à notre processus de production entier nous paraissaient nécessaires, de la prise de mesures précises du patient à la production rapide de moules et d’appareils. Cela nous a menés logiquement à envisager une solution robotisée pour nos besoins en matière de fraisage. Grâce à une augmentation de la liberté et à la réduction des contraintes physiques, l’amplitude des mouvements du robot de fraisage représentait une excellente solution pour la grande variété de tailles des pièces sur lesquelles nous devions travailler.

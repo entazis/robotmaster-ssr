@@ -1,0 +1,5 @@
+**Weber Aircraft**
+<br />Application : *Détourage/fraisage*
+<br />Secteur d’activité : *Secteur aérospatial*
+
+Weber Aircraft est un important fabricant de sièges pour avions commerciaux pour les compagnies aériennes et les avionneurs d’envergure dans le monde entier. Ces dernières années, l’entreprise s’est heurtée à une énorme pression à la baisse sur les prix tout en restant déterminée à maintenir son excellente réputation durement gagnée pour la qualité de ses produits et la satisfaction de ses clients. Une cellule de détourage axée sur la robotique était la réponse technique et économique permettant d’atteindre ces objectifs, mais l’intégration de la cellule robotisée dans les processus de fabrication constituait un problème. Weber devait être en mesure de programmer le robot avec la même facilité, flexibilité et efficacité qu’elle programmait ses machines CNC.

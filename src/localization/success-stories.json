@@ -1,0 +1,80 @@
+[
+	{
+		"id": "armatec-survivability",
+		"link": "armatec-survivability",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "avr-vision-robotics",
+		"link": "avr-vision-robotics",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "carnegie-mellon-university",
+		"link": "carnegie-mellon-university",
+		"publishDate": "",
+		"type": "customer"
+	},
+	{
+		"id": "daimler-ag",
+		"link": "daimler-ag",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "flow-automation",
+		"link": "flow-automation",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "general-atomics-aeronautical-systems",
+		"link": "general-atomics-aeronautical-systems",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "johnson-wellfield-quarries",
+		"link": "johnson-wellfield-quarries",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "osic-carbone",
+		"link": "osic-carbone",
+		"publishDate": "",
+		"type": "customer"
+	},
+    {
+		"id": "weber-aircraft",
+		"link": "weber-aircraft",
+		"publishDate": "",
+		"type": "customer"
+	},
+	{
+		"id": "why-robots-are-taking-off",
+		"link": "https://www.robotmaster.com/assets/data/pdf/Robotics_WhyRobotsAreTakingItOff.pdf",
+		"publishDate": "",
+		"type": "media"
+	},
+    {
+		"id": "european-tool-and-mold-making-december-2010",
+		"link": "https://www.robotmaster.com/assets/data/pdf/ETMM_dec2010.pdf",
+		"publishDate": "",
+		"type": "media"
+	},
+    {
+		"id": "european-tool-and-mold-making-january-2010",
+		"link": "https://www.robotmaster.com/assets/data/pdf/ETMM_janFeb10p28.pdf",
+		"publishDate": "",
+		"type": "media"
+	},
+    {
+		"id": "metalworking-production",
+		"link": "https://www.robotmaster.com/assets/data/pdf/MPW_jul2009.pdf",
+		"publishDate": "",
+		"type": "media"
+	}
+]

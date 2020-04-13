@@ -1,0 +1,5 @@
+**Daimler AG**
+<br />Application: *Hammer Peening, Laser Hardening, Laser Cladding Stamping Dies*
+<br />Industry: *Automotive*
+
+Daimler wanted to develop a hammer peening process for polishing the stamping dies used to manufacture body panels for Mercedes-Benz cars. A robot was essential to the process. Little did the automaker know how difficult it would be to program a robot to handle the millions of toolpath calculations required for this intensive process. Conventional software tools were not up to the task. A three-year collaboration between Daimler and Robotmaster resulted in a robust software solution that not only made the programming for these large, complex dies easy and error-free, it reduced offline programming time by 70 percent. Once they had a foolproof solution for hammer peening, Daimler broadened their sights to other robotic processes. Laser hardening, laser cladding, and induction hardening also proved to be a great match with Robotmaster’s single software solution.

@@ -1,0 +1,5 @@
+**AV&amp;R Robotics**
+<br />Application : *Ébavurage*
+<br />Secteur d’activité : *Moteurs d’avion*
+
+Difficile de trouver une tâche d’usinage plus complexe que l’ébavurage des chambres de combustion des moteurs d’avion, qui exige le traçage détaillé de trajectoires sur plus de 600 caractéristiques à l’aide de trois ou quatre outils différents sur chacune. AV&amp;R a développé une expertise très diversifiée pour permettre aux robots d’effectuer des tâches complexes comme celle-ci, atteignant une répétabilité élevée, une vitesse accrue et une précision améliorée. Mais la programmation manuelle des robots est un travail laborieux. Les fabricants du secteur de l’aérospatiale subissent une pression extrême d’accélérer le lancement de nouveaux produits. « Nous devions raccourcir le cycle d’apprentissage des trajectoires; il devait bien exister une meilleure façon. »

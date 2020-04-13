@@ -1,0 +1,5 @@
+**General Atomics Aeronautical Systems**
+<br />Application : *Détourage de composites de carbone*
+<br />Secteur d’activité : *Militaire*
+
+General Atomics avait acquis une impressionnante cellule robotisée à jet d’eau, une solution idéale pour détourer les assemblages d’ailes en composite de carbone/époxy de 30 pieds de leur système d’avion sans pilote (UAS). Cependant, quand est venu le temps de téléverser des modèles de coupe à partir de leurs fichiers CAO, il est devenu apparent que la création de trajectoires d’outils pour une cellule robotisée avec robot à sept axes directement à partir de fichiers de conception CAO était un territoire inexploré. Les investissements importants faits dans l’équipement de robotique, ainsi que la capacité à respecter les engagements de production, étaient en péril.

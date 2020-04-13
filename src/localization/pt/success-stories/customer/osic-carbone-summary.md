@@ -1,0 +1,5 @@
+**OSIC-CARBONE**
+<br />Aplicação: *Usinagem Ortopédica*
+<br />Indústria: *Próteses/Órteses*
+
+In 2008, ORTHOPEDIE BONTOUX, a company that has specialised in the manufacture and adaptation of orthopedic and prosthetic apparatus (orthoses and prostheses) since 1982, created its subsidiary OSIC-CARBONE. “We decided to transform our organisation to address the challenges we perceived to be facing our profession. We were widely recognised for the superior performance of our apparatus, manufactured of composite materials, but our business vision had identified revolutionary changes we considered necessary to the entire delivery process, from the precise measurements made of the patient through the rapid production of molds and apparatus. This logically led us to consider a robotic solution for our milling needs. With increased degrees of freedom and reduced physical constraints, the range of movement of the milling robot was an excellent match to the wide variety of size of parts on which we needed to work.

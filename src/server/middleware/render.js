@@ -7,6 +7,7 @@ import serialize from 'serialize-javascript';
 
 import Routes from '../../routes';
 import App from '../../App';
+import utils from '../../helpers/utils';
 
 const renderMiddleware = () => async (req, res) => {
   const matchingRoutes = matchRoutes(Routes, req.url);
@@ -23,8 +24,21 @@ const renderMiddleware = () => async (req, res) => {
         <App />
       </StaticRouter>
       );
+
+  let hrefLangs = '';
+  const langUrls = utils.generateHreflangURLs("https", req.hostname, req.url);
+  langUrls.forEach((lang) => {
+    hrefLangs += `<link rel="alternate" href="${lang.href}" hreflang="${lang.hreflang}" />\n`
+  });
+
   const htmlReplacements = {
     HTML_CONTENT: htmlContent,
+    LANG: matchingRoutes[0].match.params.lang,
+    HREFLANGS: hrefLangs,
+    TRACKING_ID: "UA-10169182-2",
+    TITLE: req.meta ? req.meta.title : "Robotmaster CAD/CAM for robots (Off-Line Programming)",
+    DESCRIPTION: req.meta ? req.meta.description : "",
+    BANNER_CHOICE: utils.randomInt(0, 4)
   };
 
   if (context.status === 404) {

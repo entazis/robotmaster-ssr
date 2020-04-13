@@ -1,0 +1,5 @@
+**Armatec Survivability/Ottobock Healthcare**
+<br />Application : *Détourage/fraisage*
+<br />Secteur d’activité : *Militaire/médical*
+
+Les robots ont souvent la réputation de faire des cercles inexacts et sont souvent relégués à des tâches de soudage ou de bras-transfert. De meilleures conceptions de machines de précision et des méthodes de calibration améliorée permettent maintenant aux robots d’atteindre des tolérances de 0,1 mm (0,005 po) ou moins, et ils sont de plus en plus fréquemment utilisés en usinage. En outre, les suites de programmation hors ligne comportent des fonctionnalités qui permettent de tirer parti des meilleures tolérances du robot et de produire des trajectoires de robot à partir de données CAO/FAO. « Être capable de créer des trajectoires d’outil directement à partir des modèles CAO solides de notre concepteur a considérablement amélioré l’exactitude de nos composants en fibre de carbone. »
