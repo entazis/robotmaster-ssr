@@ -1,57 +1,30 @@
 import React from "react";
+import { Navbar, Nav } from "react-bootstrap";
 
 import './navbar.css';
 import {FormattedMessage} from "react-intl";
 
-export default function (props) {
-  const createLink = (url, caption) => {
-    const className = (url === props.path) ? 'active' : null;
-    return (
-        <li className={className}>
-          <a href={url}>
-            {caption}
-          </a>
-        </li>
-    );
-  };
-
+export default function () {
   return (
-      <nav className="navbar navbar-default">
-        <div className="container">
-          <div className="navbar-header">
-            <button
-                type="button"
-                className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#bs-example">
-              <span className="sr-only">
-                <FormattedMessage id='navbar-toggle-nav'/>
-              </span>
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-            </button>
-            <a className="navbar-brand" href>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="/">
+          <div className="navbar-default">
+            <a className="navbar-brand">
               <div className="logo" />
             </a>
           </div>
-          <div className="collapse navbar-collapse" id="bs-example">
-            <ul className="nav navbar-nav">
-              {createLink('about',
-                  <FormattedMessage id='about-page-caption'/>)}
-              {createLink('products',
-                  <FormattedMessage id='products-page-caption'/>)}
-              {createLink('applications',
-                  <FormattedMessage id='application-page-caption'/>)}
-              {createLink('why-robotmaster',
-                  <FormattedMessage id='why-page-caption'/>)}
-              {createLink('success-stories',
-                  <FormattedMessage id='success-page-caption'/>)}
-              {createLink('partners',
-                  <FormattedMessage id='partners-page-caption'/>)}
-            </ul>
-          </div>
-        </div>
-      </nav>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/about"><FormattedMessage id='about-page-caption'/></Nav.Link>
+            <Nav.Link href="/products"><FormattedMessage id='products-page-caption'/></Nav.Link>
+            <Nav.Link href="/applications"><FormattedMessage id='application-page-caption'/></Nav.Link>
+            <Nav.Link href="/why-robotmaster"><FormattedMessage id='why-page-caption'/></Nav.Link>
+            <Nav.Link href="/success-stories"><FormattedMessage id='success-page-caption'/></Nav.Link>
+            <Nav.Link href="/partners"><FormattedMessage id='partners-page-caption'/></Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
   );
 }

@@ -53,7 +53,6 @@ const timelineYears = [
 ];
 
 export default function (props) {
-  console.log(props.match.params.lan);
   return (
       <div className="about">
         <Banner imageIndex={4}/>

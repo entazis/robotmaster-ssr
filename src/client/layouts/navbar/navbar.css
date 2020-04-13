@@ -8,7 +8,7 @@
   height: 100px;
   position: relative;
 }
-.navbar-default .navbar-brand .logo {
+.logo {
   height: 100%;
   background-image: url("/img/logo.svg");
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   width: 250px;
 }
 @media (min-width: 1200px) {
-  .navbar-default .navbar-brand .logo {
+  .logo {
     width: 290px;
   }
 }
