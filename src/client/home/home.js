@@ -1,10 +1,9 @@
 import React from "react";
-import {FormattedMessage} from "react-intl";
+import { useIntl, FormattedMessage} from "react-intl";
 import { Carousel } from 'react-bootstrap';
 
 import './home.css';
 import Ribbon from './ribbon/ribbon';
-import Banner from "../ui/banner";
 
 const slides = [
   'slideshow-img-1',
@@ -17,32 +16,23 @@ const slides = [
 ];
 
 export default function () {
-  const slideUrls = slides.map(function(id) {
-    return <FormattedMessage id={id}/>
-  });
+  const { formatMessage } = useIntl();
 
   return (
       <div className="home">
-        <Banner />
-        <div className="container slideshow">
-          <Carousel>
-            {slideUrls.map(url => {
-              return (
-                  <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={url}
-                        alt="slide"
-                    />
-                    <Carousel.Caption>
-                      <h3>Slide label</h3>
-                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                  </Carousel.Item>
-              )
-            })}
-          </Carousel>
-        </div>
+        <Carousel>
+          {slides.map(slide => {
+            return (
+                <Carousel.Item>
+                  <img
+                      className="d-block w-100"
+                      src={formatMessage({id: slide})}
+                      alt="slide"
+                  />
+                </Carousel.Item>
+            )
+          })}
+        </Carousel>
         <Ribbon/>
         <hr />
         <div className="container">
