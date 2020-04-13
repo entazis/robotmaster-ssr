@@ -83,7 +83,7 @@ export default function () {
             {columns.map(column => createColumn(column))}
           </div>
           <div className="row legal">
-            <p>
+            <p className='legalPara'>
               <a href="privacy">
                 {<FormattedMessage id='privacy-page-caption'/>}
               </a>

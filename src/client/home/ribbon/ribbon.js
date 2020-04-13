@@ -10,7 +10,7 @@ export default function(props) {
 
   //FIXME: get /api/posts
   if (props.staticContext && props.staticContext.data) {
-    const body = this.props.staticContext.data;
+    const body = props.staticContext.data;
     setPosts(JSON.parse(body));
   }
 
@@ -49,7 +49,7 @@ export default function(props) {
           <div className="col-md-6 col-sm-12 banner-slide-element">
             <a href="events">
               <div className="img-container">
-                <Carousel>
+                <Carousel indicators={false}>
                   {events.filter(event => event.home).map(event => {
                     return (
                         <Carousel.Item>
@@ -58,10 +58,6 @@ export default function(props) {
                               src={event.img}
                               alt="slide"
                           />
-                          <Carousel.Caption>
-                            <h3>Slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                          </Carousel.Caption>
                         </Carousel.Item>
                     )
                   })}
