@@ -24,13 +24,13 @@ const Routes = [
     path: '/:lang/v6-trial',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/v7-trial',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/about',
@@ -42,13 +42,13 @@ const Routes = [
     path: '/:lang/events',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/applications',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/newsroom',
@@ -57,64 +57,70 @@ const Routes = [
     loadData: () => loadData('posts')
   },
   {
+    path: '/:lang/newsroom/:postId',
+    exact: true,
+    component: Test,
+    loadData: (postId, lang) => loadData('post', postId, lang)
+  },
+  {
     path: '/:lang/contact',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/disclaimer',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/eula',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/gdpr',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/partners',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/privacy',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/products',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/whats-new',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/success-stories',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     path: '/:lang/why-robotmaster',
     exact: true,
     component: Test,
-    loadData: () => loadData('posts')
+    loadData: () => {}
   },
   {
     component: NotFound

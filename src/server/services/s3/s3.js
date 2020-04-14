@@ -1,7 +1,7 @@
 import knox from 'knox';
 const client = knox.createClient({
-      key: process.env.AWS_ACCESS_KEY_ID || '.',
-      secret: process.env.AWS_SECRET_KEY || '.',
+      key: process.env.AWS_ACCESS_KEY_ID || ' ',
+      secret: process.env.AWS_SECRET_KEY || ' ',
       bucket: "robotmaster-website"
     });
 

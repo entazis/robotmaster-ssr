@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function (props) {
-  let dataFromFetch = [];
 
+  let dataFromFetch = null;
   if (props.staticContext && props.staticContext.data) {
     dataFromFetch = props.staticContext.data
   }
@@ -11,7 +11,7 @@ export default function (props) {
       <div className={'test-class'}>
         <p>Hello test!</p>
         <ul>
-          {dataFromFetch.map(item => <li key={item.id}>item.title</li>)}
+          test-data
         </ul>
       </div>
   );

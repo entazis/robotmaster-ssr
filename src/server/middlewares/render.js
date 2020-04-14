@@ -12,9 +12,14 @@ import utils from '../../helpers/utils';
 const renderMiddleware = () => async (req, res) => {
   const matchingRoutes = matchRoutes(Routes, req.url);
 
+  const firstMatch = matchingRoutes[0].match;
+  const routeObject = matchingRoutes[0].route;
+  const lang = firstMatch.params.lang;
+  const reqId = firstMatch.params.reqId;
+
   let data;
-  if (matchingRoutes[0].route.loadData) {
-    data = await matchingRoutes[0].route.loadData();
+  if (routeObject.loadData) {
+    data = await routeObject.loadData(lang, reqId);
   }
 
   const context = { data };
