@@ -1,8 +1,49 @@
+import express from 'express';
 import path from 'path';
 import * as fs from 'fs';
 import mustache from 'mustache';
 import aws from 'aws-sdk';
 import countryList from '../../../localization/country-list.json';
+
+import messages_cs from '../../../localization/cs/pages.json';
+import messages_de from '../../../localization/de/pages.json';
+import messages_en from '../../../localization/en/pages.json';
+import messages_es from '../../../localization/es/pages.json';
+import messages_fi from '../../../localization/fi/pages.json';
+import messages_fr from '../../../localization/fr/pages.json';
+import messages_ja from '../../../localization/ja/pages.json';
+import messages_pt from '../../../localization/pt/pages.json';
+import messages_tr from '../../../localization/tr/pages.json';
+import messages_zh from '../../../localization/zh/pages.json';
+
+const messages = {
+  'cs': messages_cs,
+  'de': messages_de,
+  'en': messages_en,
+  'es': messages_es,
+  'fi': messages_fi,
+  'fr': messages_fr,
+  'ja': messages_ja,
+  'pt': messages_pt,
+  'tr': messages_tr,
+  'zh': messages_zh
+};
+
+const confirmationEmailPathBase = __dirname + '../../../localization';
+const confirmationEmailPaths = {
+  'cs': confirmationEmailPathBase + "/cs/confirmationMail.tpl",
+  'de': confirmationEmailPathBase + "/de/confirmationMail.tpl",
+  'en': confirmationEmailPathBase + "/en/confirmationMail.tpl",
+  'es': confirmationEmailPathBase + "/es/confirmationMail.tpl",
+  'fi': confirmationEmailPathBase + "/fi/confirmationMail.tpl",
+  'fr': confirmationEmailPathBase + "/fr/confirmationMail.tpl",
+  'ja': confirmationEmailPathBase + "/ja/confirmationMail.tpl",
+  'pt': confirmationEmailPathBase + "/pt/confirmationMail.tpl",
+  'tr': confirmationEmailPathBase + "/tr/confirmationMail.tpl",
+  'zh': confirmationEmailPathBase + "/zh/confirmationMail.tpl",
+};
+
+const router = express.Router();
 
 function sendEmail(pathToTemplate, ses, sourceEmailAddress, destEmailAddress, subject, emailBody) {
   fs.readFile(pathToTemplate, "utf8", function (err, template) {
@@ -34,7 +75,7 @@ function sendEmail(pathToTemplate, ses, sourceEmailAddress, destEmailAddress, su
 }
 
 function handlePostRequest(req, res) {
-  var response = {
+  const response = {
     success: true,
     messages: []
   };
@@ -77,7 +118,7 @@ function handlePostRequest(req, res) {
     response.messages.push("Your request has been sent, someone will be in touch with you shortly.");
 
     const language = req.body.language;
-    const locale = require('../../localization/' + language + '/pages');
+    const locale = messages[language];
     const confirmationEmailMessage = {
       name: req.body.name,
       message: req.body.requestingPage === "live-demo" ? locale["confirmation-email-live-demo-message"]
@@ -112,7 +153,7 @@ function handlePostRequest(req, res) {
       );
 
       sendEmail(
-          path.join(__dirname, "../../localization/" + language + "/confirmationMail.tpl"),
+          confirmationEmailPaths[language],
           ses,
           '"Robotmaster" <' + sourceEmailAddress + '>',
           req.body.email,
@@ -125,5 +166,7 @@ function handlePostRequest(req, res) {
   res.json(response);
 }
 
-export default handlePostRequest;
+router.post('/request-information', handlePostRequest);
+
+export default router;
 
