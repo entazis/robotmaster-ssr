@@ -1,12 +1,12 @@
 import React from 'react';
 import { Redirect } from 'react-router';
 
-import Home from './client/home/home';
-import About from './client/about/about';
-import NotFound from './client/not-found';
-import Test from './client/test-page';
+import Home from '../client/home/home';
+import About from '../client/about/about';
+import NotFound from '../client/not-found';
+import Test from '../client/test-page';
 
-import loadData from './helpers/loadData';
+import loadData from './loadData';
 
 const Routes = [
   {

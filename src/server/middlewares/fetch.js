@@ -1,6 +1,6 @@
 import { matchRoutes } from "react-router-config";
 
-import Routes from '../../routes';
+import Routes from '../../shared/routes';
 
 const fetchMiddleware = () => async (req, res, next) => {
   const matchingRoutes = matchRoutes(Routes, req.url);

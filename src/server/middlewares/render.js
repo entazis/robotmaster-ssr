@@ -5,7 +5,7 @@ import { StaticRouter } from 'react-router-dom';
 import serialize from 'serialize-javascript';
 
 import App from '../../App';
-import utils from '../../helpers/utils';
+import utils from '../utils';
 
 function generateHreflangElements(req) {
   let hrefLangs = '';
