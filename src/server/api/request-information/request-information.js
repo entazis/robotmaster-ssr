@@ -125,7 +125,5 @@ function handlePostRequest(req, res) {
   res.json(response);
 }
 
-export default {
-  handlePostRequest
-}
+export default handlePostRequest;
 
