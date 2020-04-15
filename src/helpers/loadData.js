@@ -1,24 +1,12 @@
 import 'isomorphic-fetch';
-import * as fs from 'fs';
-import marked from 'marked';
-
-const posts = JSON.parse(fs.readFileSync('src/blog/posts.json'));
-posts.forEach(function(post) {
-  if (typeof post.altLink === "undefined") {
-    post.content = marked(fs.readFileSync("src/blog/" + post.content, {
-      encoding: "utf8"
-    }));
-  }
-  post.summary = marked(fs.readFileSync("src/blog/" + post.summary, {
-    encoding: "utf8"
-  }));
-});
 
 const getPosts = () => {
+  const posts = [];
   return posts;
 }
 
 const getPost = (id) => {
+  const posts = [];
   const post = posts.find(post => post.id === id);
 
   if (post) {

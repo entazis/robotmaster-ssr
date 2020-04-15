@@ -2,26 +2,22 @@ import escapeStringRegexp from 'escape-string-regexp';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
-import { matchRoutes } from "react-router-config";
 import serialize from 'serialize-javascript';
 
-import Routes from '../../routes';
 import App from '../../App';
 import utils from '../../helpers/utils';
 
+function generateHreflangElements(req) {
+  let hrefLangs = '';
+  const langUrls = utils.generateHreflangURLs("https", req.hostname, req.url);
+  langUrls.forEach((lang) => {
+    hrefLangs += `<link rel="alternate" href="${lang.href}" hreflang="${lang.hreflang}" />\n`
+  });
+  return hrefLangs;
+}
+
 const renderMiddleware = () => async (req, res) => {
-  const matchingRoutes = matchRoutes(Routes, req.url);
-
-  const firstMatch = matchingRoutes[0].match;
-  const routeObject = matchingRoutes[0].route;
-  const lang = firstMatch.params.lang;
-  const reqId = firstMatch.params.reqId;
-
-  let data;
-  if (routeObject.loadData) {
-    data = await routeObject.loadData(lang, reqId);
-  }
-
+  const data = res.locals.data;
   const context = { data };
 
   const htmlContent = ReactDOMServer.renderToString(
@@ -30,16 +26,10 @@ const renderMiddleware = () => async (req, res) => {
       </StaticRouter>
       );
 
-  let hrefLangs = '';
-  const langUrls = utils.generateHreflangURLs("https", req.hostname, req.url);
-  langUrls.forEach((lang) => {
-    hrefLangs += `<link rel="alternate" href="${lang.href}" hreflang="${lang.hreflang}" />\n`
-  });
-
   const htmlReplacements = {
     HTML_CONTENT: htmlContent,
-    LANG: matchingRoutes[0].match.params.lang,
-    HREFLANGS: hrefLangs,
+    LANG: req.params.lang,
+    HREFLANGS: generateHreflangElements(req),
     TRACKING_ID: "UA-10169182-2",
     TITLE: req.meta ? req.meta.title : "Robotmaster CAD/CAM for robots (Off-Line Programming)",
     DESCRIPTION: req.meta ? req.meta.description : "",
