@@ -2,7 +2,7 @@ import path from 'path';
 import * as fs from 'fs';
 import mustache from 'mustache';
 import aws from 'aws-sdk';
-import countryList from '../../../../localization/country-list.json';
+import countryList from '../../../localization/country-list.json';
 
 function sendEmail(pathToTemplate, ses, sourceEmailAddress, destEmailAddress, subject, emailBody) {
   fs.readFile(pathToTemplate, "utf8", function (err, template) {

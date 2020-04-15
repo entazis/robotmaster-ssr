@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import path from 'path';
 import marked from 'marked';
-import languages from '../../localization/language-names.json';
+import languages from '../localization/language-names.json';
 
 const readSuccessStoriesDataSync = function(locales) {
   const returnData = {
